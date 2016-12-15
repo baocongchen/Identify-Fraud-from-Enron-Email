@@ -12,6 +12,7 @@ from sklearn import preprocessing
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 from sklearn.grid_search import GridSearchCV
 from numpy import mean
+from sklearn.cross_validation import train_test_split
 
 ### Task 1: Select what features you'll use.
 ### features_list is a list of strings, each of which is a feature name.
@@ -256,7 +257,7 @@ evaluate_clf(nb_grid_search, features, labels, nb_param)
 ### function. Because of the small size of the dataset, the script uses
 ### stratified shuffle split cross validation. For more info: 
 ### http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html
-from sklearn.cross_validation import train_test_split
+
 features_train, features_test, labels_train, labels_test = \
     train_test_split(features, labels, test_size=0.3, random_state=42)
 
